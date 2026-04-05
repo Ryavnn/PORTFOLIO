@@ -1,0 +1,142 @@
+.services-cta {
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  padding: 120px var(--grid-margin);
+}
+
+.services-cta-content {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gutter);
+  align-items: center;
+}
+
+.services-cta-left {
+  grid-column: span 8;
+}
+
+.services-cta-right {
+  grid-column: span 4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.services-cta-title {
+  font-family: var(--heading);
+  font-size: 84px;
+  font-weight: 800;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.services-cta-title .accent-text {
+  color: var(--accent);
+}
+
+.services-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 320px;
+  align-items: center;
+}
+
+/* Neubrutalist Button Styles */
+.btn-brutal-primary {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--border);
+  padding: 20px 30px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--border);
+  transition: all 0.1s;
+}
+
+.btn-brutal-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0px var(--border);
+}
+
+.btn-brutal-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--border);
+}
+
+.btn-brutal-secondary {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 20px 30px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-brutal-secondary:hover {
+  background: #f0f0f0;
+}
+
+.services-cta-email {
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.services-cta-email:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .services-cta-title {
+    font-size: 64px;
+  }
+  .services-cta-left {
+    grid-column: span 7;
+  }
+  .services-cta-right {
+    grid-column: span 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-cta {
+    padding: 80px var(--grid-margin);
+  }
+  
+  .services-cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .services-cta-left, .services-cta-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .services-cta-title {
+    font-size: 48px;
+  }
+  
+  .services-cta-actions {
+    max-width: 100%;
+    align-items: flex-start;
+  }
+}
