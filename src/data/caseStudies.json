@@ -1,0 +1,114 @@
+{
+  "bnb-safari": {
+    "label": "CASE STUDY | 2025",
+    "title": "BNB SAFARI",
+    "description": "A self-initiated booking platform built to solve a real problem in the Kenyan hospitality space — replacing informal, conversation-heavy reservation flows with a clean, direct booking experience tailored for local operators.",
+    "role": "SOLE DEVELOPER & DESIGNER",
+    "tech": "REACT, FLASK, POSTGRESQL",
+    "timeline": "25 WEEKS\nQ1 2025",
+    "challenge": {
+      "heading": "THE CHALLENGE",
+      "text": "Most small BnB operators in Kenya were running bookings through WhatsApp threads — no availability calendar, no payment confirmation, no paper trail. Every inquiry meant a back-and-forth conversation before anything was confirmed.",
+      "subtext": "The goal was to build a lightweight booking engine that gave property owners real-time control over their listings and gave guests a faster, more trustworthy path to checkout — without the overhead of a full OTA platform."
+    },
+    "strategy": [
+      {
+        "number": "01",
+        "title": "LISTING MANAGEMENT",
+        "description": "Built an operator dashboard that lets BnB hosts manage availability, pricing, and property details in real time — no technical knowledge required."
+      },
+      {
+        "number": "02",
+        "title": "GUEST EXPERIENCE",
+        "description": "Designed a browsing and booking flow optimized for mobile — full-bleed photography, availability calendar, and property details surfaced without friction."
+      },
+      {
+        "number": "03",
+        "title": "LOCAL PAYMENTS",
+        "description": "Integrated M-Pesa via the Safaricom Daraja API to handle reservations and deposits natively — no card required, no foreign payment friction."
+      }
+    ],
+    "images": {
+      "hero": "/bnb-safar-hero.webp",
+      "featured": "/bnb-safari-explore.webp",
+      "strategy": "/bnb-safari-mobile-dash.webp",
+      "gallery1": "/bnb-safari-analytics.webp",
+      "gallery2": "/bnb-safari-bookings.webp",
+      "gallery3": "/bnb-safari-dash.webp"
+    },
+    "results": [
+      {
+        "metric": "< 3 MIN",
+        "label": "To Confirm a Booking",
+        "description": "End-to-end reservation time from browsing to M-Pesa payment confirmation."
+      },
+      {
+        "metric": "100%",
+        "label": "Mobile-First",
+        "description": "Designed and tested exclusively for the devices Kenyan guests and operators actually use."
+      },
+      {
+        "metric": "0",
+        "label": "WhatsApp Steps Required",
+        "description": "Guests complete the full booking flow without leaving the platform.",
+        "highlighted": true
+      }
+    ]
+  },
+  "freelanceboard": {
+    "label": "CASE STUDY | 2026",
+    "title": "FREELANCEBOARD",
+    "description": "A personal operations system built to run my own freelance practice — replacing five separate tools with one dashboard that handles time tracking, client management, invoicing, and AI-assisted lead generation.",
+    "role": "SOLE DEVELOPER",
+    "tech": "NEXT.JS, SUPABASE, TAILWIND",
+    "timeline": "ONGOING\nStarted Q1 2026",
+    "challenge": {
+      "heading": "THE CHALLENGE",
+      "text": "Running a freelance practice means context-switching between invoicing tools, project trackers, communication threads, and spreadsheets — none of which talk to each other.",
+      "subtext": "Rather than duct-taping third-party tools together, I built one system specifically around how I actually work — with the flexibility to add modules as my workflow evolves."
+    },
+    "strategy": [
+      {
+        "number": "01",
+        "title": "MODULAR DASHBOARD",
+        "description": "Built around discrete, independently functional modules — time tracking, invoicing, client records, project milestones — so the system grows without becoming brittle."
+      },
+      {
+        "number": "02",
+        "title": "PAYMENT PROTECTION",
+        "description": "Implemented a three-gate payment flow that ties milestone completion to invoice generation, reducing the risk of unpaid work slipping through."
+      },
+      {
+        "number": "03",
+        "title": "AI LEAD GENERATION",
+        "description": "Built a leads module that scrapes Google Maps for potential clients and uses an AI layer to auto-generate tailored service proposals — turning cold outreach into a semi-automated pipeline."
+      }
+    ],
+    "images": {
+      "hero": "/board-dash.webp",
+      "featured": "/board-client-modal.webp",
+      "strategy": "/board-phone.webp",
+      "gallery1": "/board-client.webp",
+      "gallery2": "/board-project.webp",
+      "gallery3": "/board-project-modal.webp"
+    },
+    "results": [
+      {
+        "metric": "28",
+        "label": "Modules Scoped",
+        "description": "Covering the full freelance workflow from lead capture to invoice collection."
+      },
+      {
+        "metric": "1",
+        "label": "Tool Instead of Five",
+        "description": "Consolidated time tracking, invoicing, project management, and client comms into a single system."
+      },
+      {
+        "metric": "AI-Powered",
+        "label": "Lead Pipeline",
+        "description": "Automated proposal generation from Maps scraping — cuts cold outreach time significantly.",
+        "highlighted": true
+      }
+    ]
+  }
+}

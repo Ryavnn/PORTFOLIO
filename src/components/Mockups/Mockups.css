@@ -1,0 +1,157 @@
+/* Browser Mockup */
+.browser-mockup {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.browser-chrome-bar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+  height: 32px;
+}
+
+.browser-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browser-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-dot-red { background-color: #FF5F57; }
+.browser-dot-yellow { background-color: #FFBD2E; }
+.browser-dot-green { background-color: #28C840; }
+
+.browser-url-bar-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.browser-url-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #e5e5e5;
+  border-radius: 4px;
+  padding: 2px 10px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.browser-lock-icon {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.browser-url-text {
+  color: #737373;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 9px;
+  font-family: monospace;
+  letter-spacing: 0.01em;
+}
+
+.browser-spacer {
+  width: 37px;
+}
+
+.browser-content {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 36px;
+  border: 8px solid #111;
+  box-shadow: 0 0 0 1px #333, inset 0 0 0 1px #222;
+}
+
+.phone-notch-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  background-color: #000;
+  position: relative;
+  z-index: 10;
+}
+
+.phone-notch {
+  background-color: #000;
+  border-radius: 999px;
+  width: 90px;
+  height: 24px;
+}
+
+.phone-content {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.phone-home-indicator-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  padding-bottom: 8px;
+  padding-top: 4px;
+}
+
+.phone-home-indicator {
+  background-color: #525252;
+  border-radius: 999px;
+  width: 100px;
+  height: 4px;
+}
+
+/* General Image Wrapper inside Mockups */
+.browser-content .mockup-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 0; 
+}
+
+.phone-content .mockup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-radius: 0; 
+}

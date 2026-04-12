@@ -14,13 +14,24 @@
   --sans: 'DM Mono', monospace;
   --heading: 'Syne', sans-serif;
 
-  /* Grid System - Desktop (12 columns) */
-  --grid-columns: 12;
-  --grid-max-width: 75rem;
-  --grid-gutter: 1.5rem;
-  --grid-margin: 2rem;
+  /* Mobile-first base variables */
+  --grid-columns: 4;
+  --grid-max-width: 100%;
+  --grid-gutter: 1rem;
+  --grid-margin: 1.5rem;
+
+  /* Fluid Typography Scale */
+  /* Using clamp(min, preferred, max) */
+  --fs-xs: clamp(11px, 2vw, 12px);
+  --fs-sm: clamp(13px, 2.5vw, 14px);
+  --fs-base: clamp(15px, 3vw, 16px);
+  --fs-lg: clamp(18px, 4vw, 22px);
+  --fs-xl: clamp(24px, 5vw, 32px);
+  --fs-2xl: clamp(32px, 7vw, 48px);
+  --fs-3xl: clamp(28px, 6vw, 64px);
 
   font-family: var(--sans);
+  font-size: var(--fs-base);
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -29,29 +40,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Tablet Grid (8 columns) */
-@media (max-width: 1024px) {
+/* Tablet Upgrades */
+@media (min-width: 768px) {
   :root {
     --grid-columns: 8;
-    --grid-max-width: 72rem;
-    --grid-gutter: 1.6rem;
+    --grid-gutter: 1.5rem;
     --grid-margin: 2rem;
   }
 }
 
-/* Mobile Grid (4 columns) */
-@media (max-width: 768px) {
+/* Desktop Upgrades */
+@media (min-width: 1024px) {
   :root {
-    --grid-columns: 4;
-    --grid-max-width: 64rem;
-    --grid-gutter: 1.6rem;
-    --grid-margin: 2rem;
+    --grid-columns: 12;
+    --grid-max-width: 80rem;
+    /* Increased slightly for modern desktops */
+    --grid-gutter: 2rem;
   }
 }
 
 body {
   margin: 0;
   background: var(--bg);
+  overflow-x: hidden;
+  /* Prevent horizontal scroll completely */
 }
 
 #root {
@@ -60,7 +72,6 @@ body {
   min-height: 100vh;
 }
 
-/* Grid Container */
 .container {
   max-width: var(--grid-max-width);
   margin-left: auto;
@@ -70,44 +81,60 @@ body {
   width: 100%;
 }
 
-/* Grid Row */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  gap: var(--grid-gutter);
-  width: 100%;
+/* Common Mobile Helpers */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Column Spans - Desktop (12 columns) */
-.col-1 { grid-column: span 1; }
-.col-2 { grid-column: span 2; }
-.col-3 { grid-column: span 3; }
-.col-4 { grid-column: span 4; }
-.col-5 { grid-column: span 5; }
-.col-6 { grid-column: span 6; }
-.col-7 { grid-column: span 7; }
-.col-8 { grid-column: span 8; }
-.col-9 { grid-column: span 9; }
-.col-10 { grid-column: span 10; }
-.col-11 { grid-column: span 11; }
-.col-12 { grid-column: span 12; }
-
-/* Column Spans - Tablet (8 columns) */
-@media (max-width: 1024px) {
-  .col-md-1 { grid-column: span 1; }
-  .col-md-2 { grid-column: span 2; }
-  .col-md-3 { grid-column: span 3; }
-  .col-md-4 { grid-column: span 4; }
-  .col-md-5 { grid-column: span 5; }
-  .col-md-6 { grid-column: span 6; }
-  .col-md-7 { grid-column: span 7; }
-  .col-md-8 { grid-column: span 8; }
+/* Base button properties for mobile touch targets */
+button,
+a.btn {
+  min-height: 44px;
+  /* Minimum tap target size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Column Spans - Mobile (4 columns) */
-@media (max-width: 768px) {
-  .col-sm-1 { grid-column: span 1; }
-  .col-sm-2 { grid-column: span 2; }
-  .col-sm-3 { grid-column: span 3; }
-  .col-sm-4 { grid-column: span 4; }
+/* Global Hero Typography */
+.section-hero-title {
+  font-family: var(--heading);
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+  line-height: 0.9;
+  margin: 0;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+@media (min-width: 1024px) {
+  .section-hero-title {
+    letter-spacing: -3px;
+  }
+}
+
+.hero-label {
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.hero-label::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--text);
 }

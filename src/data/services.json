@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "number": "01",
+    "category": "CORE OFFER",
+    "tags": ["DESIGN", "DEVELOPMENT"],
+    "title": "WEB DESIGN & DEVELOPMENT",
+    "description": "I design and code custom websites that help you grow your business, capture more leads, and convert visitors into customers. From one-page sites to full web apps—designed with clarity and developed swiftly and fully responsive. No teams why. One person fully does code.",
+    "included": [
+      "Custom design — no themes or builders used",
+      "Mobile-first, responsive layout designs",
+      "Performance optimization for fast load times",
+      "Contact forms, integrations, and basic SEO",
+      "Interactive UIs with smooth animations"
+    ],
+    "iconCard": {
+      "icon": "🌐",
+      "bgColor": "#000"
+    },
+    "projectCard": {
+      "title": "Example/Melek",
+      "description": "Designed and built a bespoke landing page for a SaaS product that converts visitors into qualified leads.",
+      "tags": ["DESIGN", "WEBFLOW"]
+    },
+    "icon": "🎨"
+  },
+  {
+    "id": 2,
+    "number": "02",
+    "category": "CORE OFFER",
+    "tags": ["WEB", "API"],
+    "title": "PLATFORM & SYSTEM DEVELOPMENT",
+    "description": "Need something more complex than a website? I build full-stack web platforms that handle real workflows — whether it's a client portal, booking system, membership area, or custom tool for your team to use. Built to be scalable, manageable, and actually work — built on a tech stack your business can scale with.",
+    "included": [
+      "Custom dashboards and real-time data handling",
+      "API development and third-party integrations",
+      "User authentication, role management, and security",
+      "Responsive, documentation, and UI feedback"
+    ],
+    "iconCard": {
+      "icon": "⚙️",
+      "bgColor": "#000"
+    },
+    "projectCard": {
+      "title": "Job Portal",
+      "description": "Developed a fully functional job board platform with employer & job seeker roles, custom filters, and notifications.",
+      "tags": ["NEXTJS", "TAILWIND"]
+    },
+    "icon": "💻"
+  },
+  {
+    "id": 3,
+    "number": "03",
+    "category": "CORE OFFER",
+    "tags": ["WEB", "SaaS"],
+    "title": "SAAS MVP DEVELOPMENT",
+    "description": "You have a product idea. I'll take it from concept to a working, functional service that you can show investors or launch to early users. SaaS development focused on the features that matter most—no bloat, just core functionality.",
+    "included": [
+      "Product scoping and feature prioritization",
+      "UI design and interactive prototype",
+      "Payment integration (Stripe, Lemon Squeezy, etc.)",
+      "User dashboards, subscriptions, and user management",
+      "Deployment and hosting on live servers"
+    ],
+    "iconCard": {
+      "icon": "🚀",
+      "bgColor": "#000"
+    },
+    "projectCard": {
+      "title": "Freelance Board",
+      "description": "Built a two-sided SaaS marketplace for freelancers and clients with real-time messaging and payment escrow.",
+      "tags": ["REACT", "NODE.JS"]
+    },
+    "icon": "📱"
+  },
+  {
+    "id": 4,
+    "number": "04",
+    "category": "ADD-ON",
+    "tags": ["AUTOMATION"],
+    "title": "WORKFLOW AUTOMATION",
+    "description": "I connect the tools you already use—like Notion, Airtable, Google Sheets, your CRM, email marketing tools — so your team focuses on work, not admin. Maybe you need new leads to auto-populate into a spreadsheet, or orders to instantly trigger fulfillment emails. I'll set it up.",
+    "included": [
+      "Audit your current tools and manual processes",
+      "Automate workflows with Zapier, Make, or APIs",
+      "Notion databases, Airtable, CRM, email automation integrations",
+      "Notifications"
+    ],
+    "iconCard": {
+      "icon": "🔄",
+      "bgColor": "#000"
+    },
+    "projectCard": {
+      "title": "Lead Scrapper Tool",
+      "description": "Automated lead collection from multiple sources into a central database with auto-enrichment and notifications.",
+      "tags": ["PYTHON", "API"]
+    },
+    "icon": "🚀"
+  }
+]

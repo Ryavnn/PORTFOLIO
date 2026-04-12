@@ -1,0 +1,23 @@
+[
+  {
+    "id": "01",
+    "company": "Construction",
+    "text": "The employee management system Ryano Built is the backbone of our operations. He took time to understand our needs before we finished explaining them.",
+    "author": "John Ngenga",
+    "role": "CEO Gwella Store"
+  },
+  {
+    "id": "02",
+    "company": "Finance",
+    "text": "The employee management system Ryano Built is the backbone of our operations. He took time to understand our needs before we finished explaining them.",
+    "author": "Jane Doe",
+    "role": "Director Focus"
+  },
+  {
+    "id": "03",
+    "company": "Retail",
+    "text": "The employee management system Ryano Built is the backbone of our operations. He took time to understand our needs before we finished explaining them.",
+    "author": "Alice Kim",
+    "role": "CTO Mart"
+  }
+]
