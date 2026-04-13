@@ -1,38 +1,50 @@
 [
   {
-    "slug": "njorogeryan-tech",
-    "number": "01",
-    "title": "NJOROGERYAN.TECH",
-    "description": "High-performance digital identity for developers, optimized for lighthouse scores and brutalist aesthetics.",
-    "tags": ["SAAS", "PORTFOLIO"],
-    "image": "project1.jpg",
-    "layout": "left"
-  },
-  {
     "slug": "bnb-safari",
-    "number": "02",
+    "number": "01",
     "title": "BNB SAFARI",
-    "description": "A curated booking engine for luxury safari stays across East Africa.",
-    "tags": ["TRAVEL", "MARKETPLACE"],
-    "image": "project2.jpg",
+    "description": "A direct booking platform for Kenyan BnB operators — replacing WhatsApp-based reservations with M-Pesa-integrated checkout.",
+    "tags": [
+      "TRAVEL",
+      "BOOKING"
+    ],
+    "image": "/bnb-safar-hero.webp",
     "layout": "right"
   },
   {
     "slug": "freelanceboard",
-    "number": "03",
+    "number": "02",
     "title": "FREELANCEBOARD",
-    "description": "Workflow orchestration for independent creative contractors.",
-    "tags": ["SAAS", "FREELANCE"],
-    "image": "project3.jpg",
+    "description": "A personal ops system for running a freelance practice — time tracking, invoicing, client management, and AI-assisted lead generation in one dashboard.",
+    "tags": [
+      "PRODUCTIVITY",
+      "AI"
+    ],
+    "image": "/board-dash.webp",
     "layout": "left"
   },
   {
-    "slug": "lead-scrapper-tool",
-    "number": "04",
-    "title": "LEAD SCRAPPER TOOL",
-    "description": "Highly efficient lead generation engine utilizing headless browsers and proxy rotation.",
-    "tags": ["AUTOMATION", "PYTHON"],
-    "image": "project4.jpg",
+    "slug": "damtite-ems",
+    "number": "03",
+    "title": "DAMTITE EMS",
+    "description": "A workforce operations platform for an engineering firm — automated payroll, role-based field access, and real-time site-to-office sync.",
+    "tags": [
+      "ENTERPRISE",
+      "OPERATIONS"
+    ],
+    "image": "/damtite-hero.webp",
     "layout": "right"
+  },
+  {
+    "slug": "njorogeryan-tech",
+    "number": "04",
+    "title": "NJOROGERYAN.TECH",
+    "description": "Personal portfolio built for performance and editorial impact — high Lighthouse scores, brutalist type system, zero templates.",
+    "tags": [
+      "PORTFOLIO",
+      "FRONTEND"
+    ],
+    "image": "/portfolio-hero.webp",
+    "layout": "left"
   }
 ]

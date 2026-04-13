@@ -5,35 +5,35 @@
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  gap: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 80px;
 }
 
 .contact-cta {
-  grid-column: span 8;
+  flex: 1;
+  max-width: 50%;
 }
 
 .contact-info {
-  grid-column: span 4;
+  flex: 1;
+  max-width: 50%;
 }
 
 @media (max-width: 1024px) {
   .contact-content {
-    gap: 60px;
-  }
-  
-  .contact-cta, .contact-info {
-    grid-column: span 8;
+    gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .contact-content {
-    display: flex;
     flex-direction: column;
-    gap: 40px;
+  }
+  
+  .contact-cta, .contact-info {
+    max-width: 100%;
   }
 }
 

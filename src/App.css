@@ -335,6 +335,16 @@
   border: 1px solid var(--border);
 }
 
+.project-image .browser-mockup {
+  height: clamp(200px, 50vw, 300px);
+}
+
+.project-image .browser-mockup .browser-content .mockup-image {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* Upgrades for Projects */
 @media (min-width: 768px) {
   .projects-header-top {

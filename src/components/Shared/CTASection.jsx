@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './CTASection.css';
 
 const CTASection = () => {
@@ -23,16 +24,16 @@ const CTASection = () => {
               <p className="contact-label">GET IN TOUCH</p>
               <a href="mailto:info@njorogeryan.tech" className="contact-email">info@njorogeryan.tech</a>
               <div className="contact-actions">
-                <button className="btn-primary">Work with me →</button>
-                <button className="btn-outline">Download CV ↓</button>
+                <Link to="/contact"><button className="btn-primary">Work with me →</button></Link>
+                <a href="/Ryan_Njoroge_CV.pdf" download target="_blank" rel="noopener noreferrer"><button className="btn-outline">Download CV ↓</button></a>
               </div>
               <div className="contact-stats">
                 <div className="stat">
-                  <p className="stat-number">50+</p>
+                  <p className="stat-number">20+</p>
                   <p className="stat-label">Projects<br />completed</p>
                 </div>
                 <div className="stat">
-                  <p className="stat-number">3yrs</p>
+                  <p className="stat-number">3+ yrs</p>
                   <p className="stat-label">Of hands-on<br />experience</p>
                 </div>
                 <div className="stat">

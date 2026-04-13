@@ -116,8 +116,8 @@ const Navbar = () => {
                 <button className="cta-button full-width">Lets talk</button>
               </Link>
               <div className="mobile-socials">
-                <a href="#twitter">Twitter (X) ↗</a>
-                <a href="#github">GitHub ↗</a>
+                <a href="https://x.com/techbuildske" target="_blank" rel="noopener noreferrer">Twitter (X) ↗</a>
+                <a href="https://github.com/Ryavnn" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
               </div>
             </motion.div>
           </motion.div>

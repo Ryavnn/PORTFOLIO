@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import CTASection from '../components/Shared/CTASection';
@@ -105,7 +106,7 @@ export default function Services() {
                   </ul>
                 </div>
 
-                <button className="btn-service-detail">Learn More</button>
+                <Link to={`/services/${service.slug}`} className="btn-service-detail">Learn More</Link>
               </div>
 
               {service.projectCard && (

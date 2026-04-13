@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "slug": "web-design-development",
     "number": "01",
     "category": "CORE OFFER",
     "tags": ["DESIGN", "DEVELOPMENT"],
@@ -22,10 +23,61 @@
       "description": "Designed and built a bespoke landing page for a SaaS product that converts visitors into qualified leads.",
       "tags": ["DESIGN", "WEBFLOW"]
     },
-    "icon": "🎨"
+    "icon": "🎨",
+    "detail": {
+      "headline": "WEBSITES THAT WORK AS HARD AS YOU DO.",
+      "longDescription": "Every website I build starts with one question: what does this need to do for your business? Not what template should we use. Not what your competitor's site looks like. What specific outcome are we engineering towards — more leads, more bookings, more trust. From there, I design and code everything from scratch. No WordPress themes. No page builders. Just clean, fast, purpose-built code that does exactly what it needs to.",
+      "approach": [
+        {
+          "number": "01",
+          "title": "STRATEGIC DESIGN",
+          "description": "Every layout decision is driven by your business goals. I map user journeys before touching a pixel — so the design isn't just beautiful, it converts."
+        },
+        {
+          "number": "02",
+          "title": "HAND-CODED FRONTEND",
+          "description": "React, Next.js, or vanilla HTML/CSS — chosen based on what your project needs. No bloated builders. Every line of code earns its place."
+        },
+        {
+          "number": "03",
+          "title": "PERFORMANCE OBSESSED",
+          "description": "Sub-2-second load times. Optimized images. Lazy loading. Lighthouse scores that actually matter — because speed is a ranking factor and a trust signal."
+        }
+      ],
+      "deliverables": [
+        "Fully custom responsive website (desktop + tablet + mobile)",
+        "SEO-optimized page structure and meta tags",
+        "Contact forms with email notifications",
+        "Google Analytics / Tag Manager integration",
+        "Performance optimization and speed audit",
+        "30 days of post-launch support"
+      ],
+      "faq": [
+        {
+          "question": "How long does a typical website take?",
+          "answer": "Most websites are delivered within 4–8 weeks depending on complexity. A simple landing page can be done in 2 weeks. A multi-page site with custom interactions takes closer to 6–8."
+        },
+        {
+          "question": "Do you use WordPress or page builders?",
+          "answer": "No. Everything is hand-coded for performance and flexibility. You get a website that loads fast, ranks well, and doesn't break when a plugin updates."
+        },
+        {
+          "question": "What do I need to provide before we start?",
+          "answer": "Content (text, images, brand assets) and a clear idea of your goals. I'll guide you through everything else during the scoping phase."
+        },
+        {
+          "question": "Can you redesign my existing website?",
+          "answer": "Absolutely. I'll audit your current site, identify UX and performance gaps, and rebuild it from the ground up with a modern stack."
+        }
+      ],
+      "idealFor": ["Startups needing a launch-ready web presence", "Businesses replacing outdated WordPress sites", "Founders who want a site that actually converts"],
+      "timeline": "4 – 8 WEEKS",
+      "startingAt": "KES 30,000"
+    }
   },
   {
     "id": 2,
+    "slug": "platform-system-development",
     "number": "02",
     "category": "CORE OFFER",
     "tags": ["WEB", "API"],
@@ -46,10 +98,62 @@
       "description": "Developed a fully functional job board platform with employer & job seeker roles, custom filters, and notifications.",
       "tags": ["NEXTJS", "TAILWIND"]
     },
-    "icon": "💻"
+    "icon": "💻",
+    "detail": {
+      "headline": "SYSTEMS THAT RUN YOUR BUSINESS — NOT THE OTHER WAY AROUND.",
+      "longDescription": "A website shows people what you do. A platform actually does it. I build the internal tools, dashboards, portals, and custom systems that replace your spreadsheets, reduce manual work, and give your team a single source of truth. Whether it's a booking engine, a client portal, or an employee management system — I architect it for the way your business actually operates.",
+      "approach": [
+        {
+          "number": "01",
+          "title": "WORKFLOW MAPPING",
+          "description": "Before writing a single line of code, I map your actual business processes. Every feature is scoped against a real use case — not a feature list from a competitor."
+        },
+        {
+          "number": "02",
+          "title": "FULL-STACK ARCHITECTURE",
+          "description": "React or Next.js frontend, Flask or Node backend, PostgreSQL or Supabase for data. Every technology choice is justified by your scale and requirements."
+        },
+        {
+          "number": "03",
+          "title": "ROLE-BASED ACCESS",
+          "description": "Admin, manager, user — each role sees exactly what they need. Row-level security and permission systems built into the core, not bolted on later."
+        }
+      ],
+      "deliverables": [
+        "Custom web platform with admin dashboard",
+        "User authentication and role-based access control",
+        "RESTful API architecture and documentation",
+        "Database design and data migration support",
+        "Third-party integrations (payment, email, SMS)",
+        "Deployment to production with CI/CD pipeline",
+        "60 days of post-launch support and bug fixes"
+      ],
+      "faq": [
+        {
+          "question": "How is this different from a regular website?",
+          "answer": "A website displays information. A platform handles workflows — user accounts, data processing, role management, payments, real-time updates. It's software, not a brochure."
+        },
+        {
+          "question": "Can you integrate with tools we already use?",
+          "answer": "Yes. M-Pesa, Stripe, Google Workspace, Notion, Slack, custom APIs — if it has an API, I can connect it."
+        },
+        {
+          "question": "What about hosting and maintenance?",
+          "answer": "I deploy on modern infrastructure (Vercel, Railway, or your own servers) and provide documentation so your team can maintain it. Ongoing support retainers are also available."
+        },
+        {
+          "question": "How do you handle data security?",
+          "answer": "Row-level security policies, encrypted credentials, HTTPS everywhere, and proper authentication flows. Security isn't an afterthought — it's built into the architecture."
+        }
+      ],
+      "idealFor": ["Businesses replacing manual spreadsheet processes", "Teams needing internal tools and dashboards", "Companies requiring client-facing portals"],
+      "timeline": "8 – 16 WEEKS",
+      "startingAt": "KES 60,000"
+    }
   },
   {
     "id": 3,
+    "slug": "saas-mvp-development",
     "number": "03",
     "category": "CORE OFFER",
     "tags": ["WEB", "SaaS"],
@@ -58,7 +162,7 @@
     "included": [
       "Product scoping and feature prioritization",
       "UI design and interactive prototype",
-      "Payment integration (Stripe, Lemon Squeezy, etc.)",
+      "Payment integration (Stripe, M-Pesa, etc.)",
       "User dashboards, subscriptions, and user management",
       "Deployment and hosting on live servers"
     ],
@@ -71,10 +175,62 @@
       "description": "Built a two-sided SaaS marketplace for freelancers and clients with real-time messaging and payment escrow.",
       "tags": ["REACT", "NODE.JS"]
     },
-    "icon": "📱"
+    "icon": "📱",
+    "detail": {
+      "headline": "FROM IDEA TO PRODUCT — WITHOUT THE BLOAT.",
+      "longDescription": "Most MVPs fail because they try to do everything. I build MVPs that do one thing well — the thing your users actually need. We scope ruthlessly, design for clarity, build for speed, and ship something real. Not a prototype. Not a mockup. A working product with authentication, payments, and a user experience that earns trust from day one.",
+      "approach": [
+        {
+          "number": "01",
+          "title": "RUTHLESS SCOPING",
+          "description": "We strip your idea down to its core value proposition. What's the one thing your product must do well? Everything else is V2."
+        },
+        {
+          "number": "02",
+          "title": "RAPID PROTOTYPING",
+          "description": "Interactive prototypes before code. You validate the UX with real users before we invest dev hours — reducing risk and rework."
+        },
+        {
+          "number": "03",
+          "title": "PRODUCTION-GRADE CODE",
+          "description": "The MVP isn't throwaway code. It's built on a stack that scales — so when you get traction, you don't need to rebuild from scratch."
+        }
+      ],
+      "deliverables": [
+        "Product requirements document and feature map",
+        "UI/UX design with interactive prototype",
+        "Full-stack MVP with authentication and payments",
+        "User dashboard and admin panel",
+        "Subscription/billing integration",
+        "Production deployment and launch support",
+        "Technical documentation for future development"
+      ],
+      "faq": [
+        {
+          "question": "I only have an idea — is that enough to start?",
+          "answer": "Yes. I'll help you scope the idea into a buildable product during the discovery phase. You don't need wireframes or a pitch deck to begin."
+        },
+        {
+          "question": "Will the MVP code be reusable for the full product?",
+          "answer": "Absolutely. I build MVPs on production-grade architecture specifically so you don't have to throw it away when you scale."
+        },
+        {
+          "question": "Can you handle payments and subscriptions?",
+          "answer": "Yes — Stripe, PayStack, M-Pesa, or custom billing flows. Recurring subscriptions, one-time payments, or usage-based billing."
+        },
+        {
+          "question": "What happens after the MVP launches?",
+          "answer": "I provide 30 days of support post-launch. After that, we can discuss an ongoing retainer for feature development or hand off to your team with full documentation."
+        }
+      ],
+      "idealFor": ["Founders validating a product idea", "Startups preparing for investor demos", "Solo entrepreneurs launching their first digital product"],
+      "timeline": "10 – 16 WEEKS",
+      "startingAt": "KES 80,000"
+    }
   },
   {
     "id": 4,
+    "slug": "workflow-automation",
     "number": "04",
     "category": "ADD-ON",
     "tags": ["AUTOMATION"],
@@ -95,6 +251,56 @@
       "description": "Automated lead collection from multiple sources into a central database with auto-enrichment and notifications.",
       "tags": ["PYTHON", "API"]
     },
-    "icon": "🚀"
+    "icon": "🚀",
+    "detail": {
+      "headline": "STOP DOING MANUALLY WHAT MACHINES DO BETTER.",
+      "longDescription": "You're spending hours on tasks that should take seconds. Copying data between spreadsheets. Sending follow-up emails by hand. Updating records across three different tools. I audit your workflow, identify the friction points, and wire everything together — so your tools talk to each other and your team focuses on work that actually matters.",
+      "approach": [
+        {
+          "number": "01",
+          "title": "WORKFLOW AUDIT",
+          "description": "I map your current processes step by step — identifying bottlenecks, manual handoffs, and integration gaps that are costing you time."
+        },
+        {
+          "number": "02",
+          "title": "INTEGRATION DESIGN",
+          "description": "Using Make, Zapier, or custom API scripts — I design automation flows that connect your existing tools without replacing them."
+        },
+        {
+          "number": "03",
+          "title": "TESTING & HANDOFF",
+          "description": "Every automation is tested with real data, documented with clear instructions, and handed off so your team can manage it independently."
+        }
+      ],
+      "deliverables": [
+        "Workflow audit and process documentation",
+        "Custom automation flows (Make, Zapier, or API)",
+        "Integration between 3–5 existing tools",
+        "Error handling and notification alerts",
+        "Documentation and team training session",
+        "14 days of post-launch monitoring"
+      ],
+      "faq": [
+        {
+          "question": "What tools can you connect?",
+          "answer": "Anything with an API — Google Sheets, Notion, Airtable, HubSpot, Mailchimp, Slack, M-Pesa, WhatsApp Business, and hundreds more."
+        },
+        {
+          "question": "Do I need to switch to new tools?",
+          "answer": "No. The whole point is to make your current tools work better together. I build around what you already use."
+        },
+        {
+          "question": "How complex can the automations get?",
+          "answer": "From simple two-step triggers to multi-branch workflows with conditional logic, data transformation, and error handling. It depends on your needs."
+        },
+        {
+          "question": "Is this a one-time setup or ongoing?",
+          "answer": "It's a one-time setup with documentation. If your workflows evolve, I offer retainer packages for ongoing automation management."
+        }
+      ],
+      "idealFor": ["Teams drowning in manual data entry", "Businesses using 5+ disconnected tools", "Founders who want to scale without hiring ops staff"],
+      "timeline": "2 – 4 WEEKS",
+      "startingAt": "KES 40,000"
+    }
   }
 ]

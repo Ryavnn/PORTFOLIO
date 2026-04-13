@@ -5,7 +5,7 @@ const ServiceCard = ({ service }) => {
     <div className="service-card">
       <div className="service-icon">{service.icon}</div>
       <p className="service-title">{service.title}</p>
-      <Link to="/contact" className="service-link">LEARN MORE →</Link>
+      <Link to={`/services/${service.slug}`} className="service-link">LEARN MORE →</Link>
     </div>
   );
 };

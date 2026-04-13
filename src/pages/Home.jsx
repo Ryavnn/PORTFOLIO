@@ -107,7 +107,7 @@ export default function Home() {
                 <p className="section-label">MY PAST</p>
                 <h2 className="section-title">PROJECT SHOWCASE.</h2>
               </div>
-              <p className="projects-count">10+ projects</p>
+              <p className="projects-count">20+ projects</p>
             </div>
             <p className="projects-description">
               Strategic web solutions that help businesses attract<br />

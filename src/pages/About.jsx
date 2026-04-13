@@ -6,8 +6,8 @@ import '../About.css';
 
 export default function About() {
   const stats = [
-    { value: '07+', label: 'YEARS EXPERIENCE' },
-    { value: '42', label: 'PROJECTS BUILT' }
+    { value: '3+', label: 'YEARS EXPERIENCE' },
+    { value: '20+', label: 'PROJECTS BUILT' }
   ];
 
   const values = [

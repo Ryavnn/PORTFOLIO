@@ -110,5 +110,61 @@
         "highlighted": true
       }
     ]
+  },
+  "damtite-ems": {
+    "label": "CASE STUDY | 2025",
+    "title": "DAMTITE EMS",
+    "description": "A workforce operations platform built to centralize employee management, project tracking, and automated payroll for an engineering and construction firm — replacing fragmented paper and spreadsheet systems with a single mobile-optimized source of truth.",
+    "role": "LEAD DEVELOPER",
+    "tech": "REACT, FLASK, POSTGRESQL, TAILWIND",
+    "timeline": "ONGOING\nStarted Q3 2025",
+    "challenge": {
+      "heading": "THE FRAGMENTATION BARRIER",
+      "text": "Field operations at engineering firms run on disconnected systems — attendance tracked on paper, tools logged in spreadsheets, payroll calculated manually in isolation. The gaps between these create compounding errors and no single view of what's actually happening on site.",
+      "subtext": "The objective was a mobile-optimized platform that bridges site workers and office management — giving both sides real-time operational visibility without adding workflow friction."
+    },
+    "strategy": [
+      {
+        "number": "01",
+        "title": "ROLE-BASED ACCESS",
+        "description": "Built a three-tier permission system — Admin, Manager, Worker — with granular access controls tailored to how each role actually operates, whether in the office or on site."
+      },
+      {
+        "number": "02",
+        "title": "AUTOMATED PAYROLL",
+        "description": "Engineered a payroll calculation engine that pulls directly from attendance logs, approved leave records, and advance requests — removing manual computation from the process entirely."
+      },
+      {
+        "number": "03",
+        "title": "FIELD-TO-OFFICE SYNC",
+        "description": "Developed real-time tool request workflows and image-based proof-of-work uploads — giving office management verifiable daily progress reports straight from the site."
+      }
+    ],
+    "images": {
+      "hero": "/damtite-hero.webp",
+      "featured": "/damtite-manager.webp",
+      "strategy": "/damtite-mobile.webp",
+      "gallery1": "/damtite-employee.webp",
+      "gallery2": "/damtite-employee-mgt.webp",
+      "gallery3": "/damtite-profile.webp"
+    },
+    "results": [
+      {
+        "metric": "3-TIER",
+        "label": "Access Control",
+        "description": "Distinct permission layers for Workers, Managers, and Admins — each scoped to their operational context."
+      },
+      {
+        "metric": "10+",
+        "label": "Integrated Modules",
+        "description": "Payroll, attendance, leave, tool requests, project tracking, and more — consolidated into one system."
+      },
+      {
+        "metric": "MOBILE",
+        "label": "Field Optimized",
+        "description": "Built for reliability on-site — workers submit attendance, tool requests, and proof-of-work from their phones.",
+        "highlighted": true
+      }
+    ]
   }
 }

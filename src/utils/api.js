@@ -29,6 +29,15 @@ export const getServices = async () => {
   return servicesData;
 };
 
+export const getServiceBySlug = async (slug) => {
+  await delay(300);
+  const service = servicesData.find(s => s.slug === slug);
+  if (!service) {
+    throw new Error('Service not found');
+  }
+  return service;
+};
+
 export const getTestimonials = async () => {
   await delay(300);
   return testimonialsData;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import { BrowserMockup } from '../components/Mockups/BrowserMockup';
@@ -201,8 +201,8 @@ export default function CaseStudy() {
             SIMILAR TRANSFORMATION?
           </h2>
           <div className="cs-cta-buttons">
-            <button onClick={() => window.location.href='/contact'} className="btn-primary">LET'S TALK PROJECT →</button>
-            <button onClick={() => window.location.href='/projects'} className="btn-secondary">VIEW PORTFOLIO</button>
+            <Link to="/contact"><button className="btn-primary">LET'S TALK PROJECT →</button></Link>
+            <Link to="/projects"><button className="btn-secondary">VIEW PORTFOLIO</button></Link>
           </div>
         </div>
       </section>

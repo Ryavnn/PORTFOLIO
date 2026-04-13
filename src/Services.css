@@ -227,6 +227,10 @@
   align-self: stretch; /* Full width on mobile */
   margin-top: 12px;
   text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-service-detail:hover { opacity: 0.9; }
 
