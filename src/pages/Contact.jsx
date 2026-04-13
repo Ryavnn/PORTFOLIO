@@ -2,6 +2,7 @@ import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import SEO from '../components/Shared/SEO';
 import './Contact.css';
 
 export default function Contact() {
@@ -66,6 +67,11 @@ export default function Contact() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Contact — Start a Project with Ryan Njoroge"
+        description="Ready to build something? Get in touch with Ryan Njoroge for web design, development, SaaS builds, and automation projects. Based in Nairobi, working globally."
+        canonical="/contact"
+      />
       <Navbar />
 
       <section className="contact-hero">

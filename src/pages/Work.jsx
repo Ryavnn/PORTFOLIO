@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import CTASection from '../components/Shared/CTASection';
+import SEO from '../components/Shared/SEO';
 import ProjectCard from '../components/Cards/ProjectCard';
 import { getProjects } from '../utils/api';
 import { motion } from 'framer-motion';
@@ -26,6 +27,11 @@ export default function Work() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Projects & Case Studies — Web & Platform Builds"
+        description="Browse Ryan Njoroge's project portfolio. Case studies covering booking platforms, SaaS dashboards, enterprise workforce tools, and personal portfolio sites built from scratch."
+        canonical="/projects"
+      />
       <Navbar />
 
       <section className="work-hero">

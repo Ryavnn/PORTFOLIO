@@ -3,6 +3,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import CTASection from '../components/Shared/CTASection';
+import SEO from '../components/Shared/SEO';
 import { getServiceBySlug } from '../utils/api';
 import { motion } from 'framer-motion';
 import '../styles/ServiceDetail.css';
@@ -46,6 +47,12 @@ export default function ServiceDetail() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title={`${service.title} — Ryan Njoroge`}
+        description={`${service.description.slice(0, 155).trim()}…`}
+        canonical={`/services/${service.slug}`}
+        type="service"
+      />
       <Navbar />
 
       {/* Hero Section */}

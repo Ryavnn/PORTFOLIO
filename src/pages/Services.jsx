@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import CTASection from '../components/Shared/CTASection';
+import SEO from '../components/Shared/SEO';
 import { getServices } from '../utils/api';
 import { motion } from 'framer-motion';
 import '../Services.css'; // Use existing css
@@ -53,6 +54,11 @@ export default function Services() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Services — Web Design, Development, SaaS & Automation"
+        description="Ryan Njoroge offers four specialist services: custom web design & development, platform & system development, SaaS MVP builds, and workflow automation. No filler — just what he's shipped."
+        canonical="/services"
+      />
       <Navbar />
 
       <section className="services-hero">

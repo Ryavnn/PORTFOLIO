@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://njorogeryan.tech/sitemap.xml
+
+# Disallow any potential admin or draft paths (none currently, but good practice)
+Disallow: /api/

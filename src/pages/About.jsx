@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
+import SEO from '../components/Shared/SEO';
 import { motion } from 'framer-motion';
 import '../About.css';
 
@@ -50,6 +51,11 @@ export default function About() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="About Ryan Njoroge — Digital Product Builder, Nairobi"
+        description="Learn about Ryan Njoroge — a Nairobi-based developer and designer with 3+ years building high-performance web products, SaaS platforms, and automated digital systems."
+        canonical="/about"
+      />
       <Navbar />
 
       <section className="about-hero">

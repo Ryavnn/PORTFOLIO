@@ -4,6 +4,7 @@ import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import { BrowserMockup } from '../components/Mockups/BrowserMockup';
 import { PhoneMockup } from '../components/Mockups/PhoneMockup';
+import SEO from '../components/Shared/SEO';
 import { getProjectBySlug } from '../utils/api';
 import { motion } from 'framer-motion';
 import '../CaseStudy.css';
@@ -40,6 +41,13 @@ export default function CaseStudy() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title={`${project.title} — Case Study`}
+        description={`${project.description.slice(0, 155).trim()}…`}
+        canonical={`/projects/${project.slug}`}
+        image={project.images?.featured || project.images?.hero || undefined}
+        type="article"
+      />
       <Navbar />
 
       <section className="cs-hero">

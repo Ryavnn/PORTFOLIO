@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import CTASection from '../components/Shared/CTASection';
+import SEO from '../components/Shared/SEO';
 import ProjectCard from '../components/Cards/ProjectCard';
 import ServiceCard from '../components/Cards/ServiceCard';
 import TestimonialCard from '../components/Cards/TestimonialCard';
@@ -54,6 +55,11 @@ export default function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Ryan Njoroge — Web Design, Development & Automation | Nairobi, Kenya"
+        description="Nairobi-based digital product builder specialising in custom web design, full-stack development, SaaS MVPs, and workflow automation. Let's build something that works."
+        canonical="/"
+      />
       <Navbar />
 
       <section className="hero">
