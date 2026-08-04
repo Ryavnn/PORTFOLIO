@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { BrowserMockup } from '../Mockups/BrowserMockup';
 
 const ProjectCard = ({ project, isReverse }) => {
@@ -36,7 +36,7 @@ const ProjectCard = ({ project, isReverse }) => {
               <div className="font-sans text-xs tracking-[1px] m-0 leading-[1.6]">
                 {Array.isArray(project.tags) ? project.tags.map(t => <span key={t} className="mr-2">{t}</span>) : <span>{project.tags}</span>}
               </div>
-              <Link to={`/projects/${project.slug}`} className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
+              <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
             </div>
           </div>
           <div className="flex items-center w-full max-md:order-first">
@@ -59,7 +59,7 @@ const ProjectCard = ({ project, isReverse }) => {
               <div className="font-sans text-xs tracking-[1px] m-0 leading-[1.6]">
                 {Array.isArray(project.tags) ? project.tags.map(t => <span key={t} className="mr-2">{t}</span>) : <span>{project.tags}</span>}
               </div>
-              <Link to={`/projects/${project.slug}`} className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
+              <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
             </div>
           </div>
         </>
