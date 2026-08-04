@@ -15,7 +15,7 @@
       "Interactive UIs with smooth animations"
     ],
     "iconCard": {
-      "icon": "🌐",
+      "icon": "Globe",
       "bgColor": "#000"
     },
     "projectCard": {
@@ -23,7 +23,7 @@
       "description": "Designed and built a bespoke landing page for a SaaS product that converts visitors into qualified leads.",
       "tags": ["DESIGN", "WEBFLOW"]
     },
-    "icon": "🎨",
+    "icon": "Palette",
     "detail": {
       "headline": "WEBSITES THAT WORK AS HARD AS YOU DO.",
       "longDescription": "Every website I build starts with one question: what does this need to do for your business? Not what template should we use. Not what your competitor's site looks like. What specific outcome are we engineering towards — more leads, more bookings, more trust. From there, I design and code everything from scratch. No WordPress themes. No page builders. Just clean, fast, purpose-built code that does exactly what it needs to.",
@@ -90,7 +90,7 @@
       "Responsive, documentation, and UI feedback"
     ],
     "iconCard": {
-      "icon": "⚙️",
+      "icon": "Settings",
       "bgColor": "#000"
     },
     "projectCard": {
@@ -98,7 +98,7 @@
       "description": "Developed a fully functional job board platform with employer & job seeker roles, custom filters, and notifications.",
       "tags": ["NEXTJS", "TAILWIND"]
     },
-    "icon": "💻",
+    "icon": "Laptop",
     "detail": {
       "headline": "SYSTEMS THAT RUN YOUR BUSINESS — NOT THE OTHER WAY AROUND.",
       "longDescription": "A website shows people what you do. A platform actually does it. I build the internal tools, dashboards, portals, and custom systems that replace your spreadsheets, reduce manual work, and give your team a single source of truth. Whether it's a booking engine, a client portal, or an employee management system — I architect it for the way your business actually operates.",
@@ -167,7 +167,7 @@
       "Deployment and hosting on live servers"
     ],
     "iconCard": {
-      "icon": "🚀",
+      "icon": "Rocket",
       "bgColor": "#000"
     },
     "projectCard": {
@@ -175,7 +175,7 @@
       "description": "Built a two-sided SaaS marketplace for freelancers and clients with real-time messaging and payment escrow.",
       "tags": ["REACT", "NODE.JS"]
     },
-    "icon": "📱",
+    "icon": "Smartphone",
     "detail": {
       "headline": "FROM IDEA TO PRODUCT — WITHOUT THE BLOAT.",
       "longDescription": "Most MVPs fail because they try to do everything. I build MVPs that do one thing well — the thing your users actually need. We scope ruthlessly, design for clarity, build for speed, and ship something real. Not a prototype. Not a mockup. A working product with authentication, payments, and a user experience that earns trust from day one.",
@@ -243,7 +243,7 @@
       "Notifications"
     ],
     "iconCard": {
-      "icon": "🔄",
+      "icon": "RefreshCw",
       "bgColor": "#000"
     },
     "projectCard": {
@@ -251,7 +251,7 @@
       "description": "Automated lead collection from multiple sources into a central database with auto-enrichment and notifications.",
       "tags": ["PYTHON", "API"]
     },
-    "icon": "🚀",
+    "icon": "Rocket",
     "detail": {
       "headline": "STOP DOING MANUALLY WHAT MACHINES DO BETTER.",
       "longDescription": "You're spending hours on tasks that should take seconds. Copying data between spreadsheets. Sending follow-up emails by hand. Updating records across three different tools. I audit your workflow, identify the friction points, and wire everything together — so your tools talk to each other and your team focuses on work that actually matters.",

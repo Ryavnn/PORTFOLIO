@@ -1,140 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --bg: #F2EDE4;
-  --text: #0F0F0F;
-  --accent: #E83B1F;
-  --border: #0F0F0F;
-  --card-bg: #ECEAE0;
-
-  --sans: 'DM Mono', monospace;
-  --heading: 'Syne', sans-serif;
-
-  /* Mobile-first base variables */
-  --grid-columns: 4;
-  --grid-max-width: 100%;
-  --grid-gutter: 1rem;
-  --grid-margin: 1.5rem;
-
-  /* Fluid Typography Scale */
-  /* Using clamp(min, preferred, max) */
-  --fs-xs: clamp(11px, 2vw, 12px);
-  --fs-sm: clamp(13px, 2.5vw, 14px);
-  --fs-base: clamp(15px, 3vw, 16px);
-  --fs-lg: clamp(18px, 4vw, 22px);
-  --fs-xl: clamp(24px, 5vw, 32px);
-  --fs-2xl: clamp(32px, 7vw, 48px);
-  --fs-3xl: clamp(28px, 6vw, 64px);
-
-  font-family: var(--sans);
-  font-size: var(--fs-base);
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Tablet Upgrades */
-@media (min-width: 768px) {
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@layer base {
   :root {
-    --grid-columns: 8;
-    --grid-gutter: 1.5rem;
-    --grid-margin: 2rem;
+    --grid-columns: 4;
+    --grid-max-width: 100%;
+    --grid-gutter: 1rem;
+    --grid-margin: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --grid-columns: 8;
+      --grid-gutter: 1.5rem;
+      --grid-margin: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --grid-columns: 12;
+      --grid-max-width: 80rem;
+      --grid-gutter: 2rem;
+    }
+  }
+
+  body {
+    @apply bg-bg text-text font-sans antialiased m-0;
+    overflow-x: hidden;
+  }
+  
+  #root {
+    @apply w-full mx-auto min-h-screen;
   }
 }
 
-/* Desktop Upgrades */
-@media (min-width: 1024px) {
-  :root {
-    --grid-columns: 12;
-    --grid-max-width: 80rem;
-    /* Increased slightly for modern desktops */
-    --grid-gutter: 2rem;
+@layer components {
+  .container {
+    max-width: var(--grid-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid-margin);
+    padding-right: var(--grid-margin);
+    width: 100%;
   }
-}
 
-body {
-  margin: 0;
-  background: var(--bg);
-  overflow-x: hidden;
-  /* Prevent horizontal scroll completely */
-}
-
-#root {
-  max-width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: var(--grid-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--grid-margin);
-  padding-right: var(--grid-margin);
-  width: 100%;
-}
-
-/* Common Mobile Helpers */
-img,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Base button properties for mobile touch targets */
-button,
-a.btn {
-  min-height: 44px;
-  /* Minimum tap target size */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Global Hero Typography */
-.section-hero-title {
-  font-family: var(--heading);
-  font-size: var(--fs-3xl);
-  font-weight: 800;
-  line-height: 0.9;
-  margin: 0;
-  letter-spacing: -2px;
-  text-transform: uppercase;
-}
-
-.accent-text {
-  color: var(--accent);
-}
-
-@media (min-width: 1024px) {
   .section-hero-title {
-    letter-spacing: -3px;
+    @apply font-heading text-3xl font-extrabold leading-[0.9] m-0 tracking-[-2px] uppercase lg:tracking-[-3px];
   }
-}
 
-.hero-label {
-  font-family: var(--sans);
-  font-size: var(--fs-xs);
-  letter-spacing: 1.5px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  opacity: 0.6;
-  text-transform: uppercase;
-}
+  .accent-text {
+    @apply text-accent;
+  }
 
-.hero-label::before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 1px;
-  background: var(--text);
+  .hero-label {
+    @apply font-sans text-xs tracking-[1.5px] mb-[20px] flex items-center gap-[15px] opacity-60 uppercase;
+  }
+
+  .hero-label::before {
+    content: '';
+    @apply inline-block w-[30px] h-[1px] bg-text;
+  }
+
+  button,
+  a.btn {
+    @apply min-h-[44px] inline-flex items-center justify-center;
+  }
+
+  .btn-primary, .btn-secondary, .btn-outline {
+    @apply font-sans text-sm cursor-pointer transition-all duration-200 font-medium py-[16px] px-[32px] text-center inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white border-none hover:opacity-90;
+  }
+
+  .btn-secondary, .btn-outline {
+    @apply bg-transparent text-text border-2 border-solid border-border hover:bg-text hover:text-bg hover:border-text;
+  }
 }

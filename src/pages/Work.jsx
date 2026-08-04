@@ -6,7 +6,6 @@ import SEO from '../components/Shared/SEO';
 import ProjectCard from '../components/Cards/ProjectCard';
 import { getProjects } from '../utils/api';
 import { motion } from 'framer-motion';
-import '../Work.css'; // existing styles
 
 export default function Work() {
   const [projects, setProjects] = useState([]);
@@ -21,7 +20,7 @@ export default function Work() {
 
   return (
     <motion.div 
-      className="work-page"
+      className="min-h-screen bg-bg text-text"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
@@ -34,22 +33,22 @@ export default function Work() {
       />
       <Navbar />
 
-      <section className="work-hero">
-        <div className="work-hero-content">
+      <section className="max-w-grid-max mx-auto px-grid-margin py-[60px] md:py-[80px]">
+        <div className="flex flex-col gap-[20px]">
           <p className="hero-label">CASE STUDIES</p>
           <h1 className="section-hero-title">
             ARCHITECTING<br />
             THE <span className="accent-text">DIGITAL</span><br />
             LANDSCAPE.
           </h1>
-          <p className="work-hero-subtitle">
+          <p className="font-sans text-sm md:text-[16px] leading-[1.6] m-0 opacity-90">
             A selection of platforms, SaaS MVPs, and automated<br />
             systems built from the ground up.
           </p>
         </div>
       </section>
 
-      <section className="projects-grid">
+      <section className="max-w-grid-max mx-auto px-grid-margin py-[40px] flex flex-col gap-[60px] md:gap-[80px]">
         {projects.map((project, index) => (
           <ProjectCard 
             key={project.slug} 
@@ -59,7 +58,6 @@ export default function Work() {
         ))}
       </section>
 
-      {/* Replaced WorkCTA with shared CTASection */}
       <CTASection />
       <Footer />
     </motion.div>

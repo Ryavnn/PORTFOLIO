@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +11,7 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Prevent scorlling when menu is open
+  // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -42,40 +41,46 @@ const Navbar = () => {
   };
 
   return (
-    <header className="header">
-      <div className="header-content">
-        <Link to="/" className="logo">
+    <header className="sticky top-0 bg-bg border-b-2 border-border z-[1000] w-full">
+      <div className="max-w-grid-max mx-auto flex justify-between items-center px-grid-margin py-4 md:py-5 relative z-[1001] bg-bg">
+        <Link to="/" className="flex items-center text-inherit z-[1002]">
           <img src="/LOGO.png" alt="Ryan Builds Logo" width="40" height="40" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="nav desktop-nav">
+        <nav className="hidden md:flex gap-[40px]">
           {navLinks.map((link) => (
             <NavLink 
               key={link.name} 
               to={link.path} 
-              className={({ isActive }) => isActive ? 'active' : ''}
+              className={({ isActive }) => 
+                `font-sans text-sm text-text no-underline transition-colors duration-200 font-medium py-[8px] hover:text-accent relative ${
+                  isActive ? 'text-accent after:content-[""] after:absolute after:bottom-[-15px] after:left-0 after:right-0 after:h-[2px] after:bg-accent' : ''
+                }`
+              }
             >
               {link.name}
             </NavLink>
           ))}
         </nav>
 
-        <div className="desktop-cta">
+        <div className="hidden md:flex">
           <Link to="/contact">
-            <button className="cta-button">Lets talk</button>
+            <button className="bg-accent text-bg border-none px-[28px] py-[14px] font-sans text-sm cursor-pointer transition-opacity duration-200 font-bold uppercase tracking-[0.5px] md:hover:opacity-90">
+              Lets talk
+            </button>
           </Link>
         </div>
 
         {/* Mobile Toggle Button */}
         <button 
-          className="mobile-toggle" 
+          className="bg-transparent border-none cursor-pointer p-[10px] z-[1002] flex items-center justify-center md:hidden" 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <div className={`hamburger ${isOpen ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
+          <div className="w-[30px] h-[20px] relative flex flex-col justify-between">
+            <span className={`block w-full h-[2px] bg-text transition-all duration-300 origin-center ${isOpen ? 'translate-y-[9px] rotate-45' : ''}`}></span>
+            <span className={`block w-full h-[2px] bg-text transition-all duration-300 origin-center ${isOpen ? '-translate-y-[9px] -rotate-45' : ''}`}></span>
           </div>
         </button>
       </div>
@@ -84,14 +89,21 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            className="mobile-menu"
+            className="fixed top-0 left-0 w-full h-[100dvh] bg-bg z-[1000] flex flex-col justify-between pt-[100px] px-grid-margin pb-[40px] overflow-y-auto md:!hidden"
             initial="closed"
             animate="open"
             exit="closed"
             variants={menuVariants}
           >
-            <nav className="mobile-nav-links">
-              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
+            <nav className="flex flex-col gap-[32px] mt-[40px]">
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => 
+                  `font-heading text-2xl font-bold text-text no-underline tracking-[-1px] ${isActive ? 'text-accent' : ''}`
+                }
+              >
+                Home
+              </NavLink>
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -99,7 +111,12 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + (i * 0.1) }}
                 >
-                  <NavLink to={link.path} className={({ isActive }) => isActive ? 'active' : ''}>
+                  <NavLink 
+                    to={link.path} 
+                    className={({ isActive }) => 
+                      `font-heading text-2xl font-bold text-text no-underline tracking-[-1px] ${isActive ? 'text-accent' : ''}`
+                    }
+                  >
                     {link.name}
                   </NavLink>
                 </motion.div>
@@ -107,17 +124,19 @@ const Navbar = () => {
             </nav>
             
             <motion.div 
-              className="mobile-menu-footer"
+              className="flex flex-col gap-[32px] mt-[60px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
               <Link to="/contact">
-                <button className="cta-button full-width">Lets talk</button>
+                <button className="w-full bg-accent text-bg border-none px-[28px] py-[14px] font-sans text-sm cursor-pointer transition-opacity duration-200 font-bold uppercase tracking-[0.5px]">
+                  Lets talk
+                </button>
               </Link>
-              <div className="mobile-socials">
-                <a href="https://x.com/techbuildske" target="_blank" rel="noopener noreferrer">Twitter (X) ↗</a>
-                <a href="https://github.com/Ryavnn" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <div className="flex flex-col gap-[16px]">
+                <a href="https://x.com/techbuildske" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-text no-underline opacity-70">Twitter (X) ↗</a>
+                <a href="https://github.com/Ryavnn" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-text no-underline opacity-70">GitHub ↗</a>
               </div>
             </motion.div>
           </motion.div>

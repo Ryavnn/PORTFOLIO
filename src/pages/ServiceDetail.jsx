@@ -4,9 +4,9 @@ import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import CTASection from '../components/Shared/CTASection';
 import SEO from '../components/Shared/SEO';
+import Icon from '../components/Shared/Icon';
 import { getServiceBySlug } from '../utils/api';
 import { motion } from 'framer-motion';
-import '../styles/ServiceDetail.css';
 
 export default function ServiceDetail() {
   const { slug } = useParams();
@@ -34,14 +34,14 @@ export default function ServiceDetail() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  if (loading) return <div className="sd-page"><Navbar /><div style={{padding: '100px', textAlign: 'center'}}>Loading...</div><Footer /></div>;
+  if (loading) return <div className="min-h-screen bg-bg text-text"><Navbar /><div style={{padding: '100px', textAlign: 'center'}}>Loading...</div><Footer /></div>;
   if (error || !service) return <Navigate to="/services" replace />;
 
   const detail = service.detail;
 
   return (
     <motion.div 
-      className="sd-page"
+      className="min-h-screen bg-bg text-text"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -56,38 +56,38 @@ export default function ServiceDetail() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="sd-hero">
-        <div className="sd-hero-content">
-          <div className="sd-hero-left">
-            <div className="sd-hero-meta">
-              <span className="sd-number">{service.number}</span>
-              <div className="sd-tags">
-                <span className="sd-category-tag">{service.category}</span>
+      <section className="max-w-grid-max mx-auto px-grid-margin pt-[40px] pb-[60px] md:pt-[60px] md:pb-[80px] border-b-2 border-border">
+        <div className="flex flex-col gap-[40px] lg:grid lg:grid-cols-[1fr_340px] lg:gap-[60px] lg:items-start">
+          <div className="flex flex-col gap-[20px]">
+            <div className="flex items-center gap-[16px] flex-wrap">
+              <span className="font-sans text-[16px] font-medium">{service.number}</span>
+              <div className="flex gap-[8px] flex-wrap">
+                <span className="font-sans text-[11px] py-[6px] px-[12px] bg-text text-bg tracking-[0.5px]">{service.category}</span>
                 {service.tags && service.tags.map((tag, i) => (
-                  <span key={i} className="sd-tag">{tag}</span>
+                  <span key={i} className="font-sans text-[11px] py-[6px] px-[12px] border border-border tracking-[0.5px]">{tag}</span>
                 ))}
               </div>
             </div>
-            <h1 className="sd-title">{service.title}</h1>
-            <p className="sd-description">{service.description}</p>
-            <div className="sd-hero-actions">
-              <Link to="/contact"><button className="btn-primary">START THIS PROJECT →</button></Link>
-              <Link to="/services"><button className="btn-secondary">← ALL SERVICES</button></Link>
+            <h1 className="font-heading text-3xl font-bold leading-none m-0 tracking-[-1.5px]">{service.title}</h1>
+            <p className="font-sans text-base leading-[1.7] m-0">{service.description}</p>
+            <div className="flex flex-col gap-[12px] mt-[8px] md:flex-row">
+              <Link to="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto">START THIS PROJECT →</button></Link>
+              <Link to="/services" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto">← ALL SERVICES</button></Link>
             </div>
           </div>
-          <div className="sd-hero-right">
-            <div className="sd-hero-card">
-              <div className="sd-hero-icon-box">
-                <span className="sd-hero-icon">{service.iconCard?.icon || '📦'}</span>
+          <div className="flex items-start">
+            <div className="w-full border-2 border-border flex flex-col">
+              <div className="bg-text flex items-center justify-center p-[40px] aspect-video">
+                <span className="text-[64px] text-bg"><Icon name={service.iconCard?.icon || 'Package'} size={64} /></span>
               </div>
-              <div className="sd-hero-card-details">
-                <div className="sd-hero-stat">
-                  <span className="sd-stat-label">TIMELINE</span>
-                  <span className="sd-stat-value">{detail.timeline}</span>
+              <div className="flex border-t-2 border-border">
+                <div className="flex-1 p-[20px] flex flex-col gap-[6px] border-r-2 border-border">
+                  <span className="font-sans text-[11px] tracking-[1px] opacity-60">TIMELINE</span>
+                  <span className="font-heading text-lg font-bold tracking-[-0.5px]">{detail.timeline}</span>
                 </div>
-                <div className="sd-hero-stat">
-                  <span className="sd-stat-label">STARTING AT</span>
-                  <span className="sd-stat-value">{detail.startingAt}</span>
+                <div className="flex-1 p-[20px] flex flex-col gap-[6px]">
+                  <span className="font-sans text-[11px] tracking-[1px] opacity-60">STARTING AT</span>
+                  <span className="font-heading text-lg font-bold tracking-[-0.5px]">{detail.startingAt}</span>
                 </div>
               </div>
             </div>
@@ -96,46 +96,46 @@ export default function ServiceDetail() {
       </section>
 
       {/* Headline Section */}
-      <section className="sd-headline">
-        <div className="sd-headline-content">
-          <h2 className="sd-headline-text">{detail.headline}</h2>
+      <section className="max-w-grid-max mx-auto px-grid-margin py-[60px] border-b-2 border-border">
+        <div>
+          <h2 className="font-heading text-[clamp(24px,5vw,42px)] font-bold leading-[1.15] m-0 tracking-[-1px] max-w-[800px]">{detail.headline}</h2>
         </div>
       </section>
 
       {/* Long Description */}
-      <section className="sd-about">
-        <div className="sd-about-content">
-          <div className="sd-about-left">
-            <h3 className="sd-section-heading">WHAT THIS<br />LOOKS LIKE</h3>
+      <section className="max-w-grid-max mx-auto px-grid-margin py-[60px] border-b-2 border-border">
+        <div className="flex flex-col gap-[32px] lg:grid lg:grid-cols-[1fr_2fr] lg:gap-[80px]">
+          <div>
+            <h3 className="font-heading text-xl font-bold leading-[1.2] m-0 tracking-[-0.5px]">WHAT THIS<br />LOOKS LIKE</h3>
           </div>
-          <div className="sd-about-right">
-            <p className="sd-about-text">{detail.longDescription}</p>
+          <div>
+            <p className="font-sans text-base leading-[1.7] m-0">{detail.longDescription}</p>
           </div>
         </div>
       </section>
 
       {/* Approach / Strategy Section */}
       {detail.approach && (
-        <section className="sd-approach">
-          <div className="sd-approach-box">
-            <div className="sd-approach-content">
-              <div className="sd-approach-left">
-                <h2 className="sd-approach-heading">MY<br />APPROACH</h2>
-                <div className="sd-approach-list">
+        <section className="max-w-grid-max mx-auto px-grid-margin pb-[60px]">
+          <div className="bg-text text-bg p-[40px_24px] md:p-[60px]">
+            <div className="flex flex-col gap-[40px] lg:grid lg:grid-cols-2 lg:gap-[60px]">
+              <div>
+                <h2 className="font-heading text-2xl font-bold leading-[1.1] m-[0_0_32px_0] md:m-[0_0_40px_0] tracking-[-1px]">MY<br />APPROACH</h2>
+                <div className="flex flex-col gap-[32px]">
                   {detail.approach.map((item, index) => (
-                    <div key={index} className="sd-approach-item">
-                      <span className="sd-approach-number">{item.number}</span>
-                      <div className="sd-approach-text">
-                        <h4 className="sd-approach-title">{item.title}</h4>
-                        <p className="sd-approach-desc">{item.description}</p>
+                    <div key={index} className="flex gap-[16px] items-start">
+                      <span className="font-heading text-[24px] font-bold text-accent shrink-0">{item.number}</span>
+                      <div className="flex flex-col gap-[8px]">
+                        <h4 className="font-sans text-[16px] font-bold m-0 tracking-[0.5px]">{item.title}</h4>
+                        <p className="font-sans text-[13px] leading-[1.6] m-0 opacity-90">{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="sd-approach-right">
-                <div className="sd-approach-visual">
-                  <span className="sd-approach-icon">{service.iconCard?.icon || '📦'}</span>
+              <div className="flex items-center justify-center">
+                <div className="w-full aspect-square max-w-[280px] border-2 border-solid border-[rgba(242,237,228,0.15)] bg-[rgba(15,15,15,0.5)] flex items-center justify-center">
+                  <span className="text-[80px] opacity-40"><Icon name={service.iconCard?.icon || 'Package'} size={80} /></span>
                 </div>
               </div>
             </div>
@@ -145,17 +145,17 @@ export default function ServiceDetail() {
 
       {/* Deliverables Section */}
       {detail.deliverables && (
-        <section className="sd-deliverables">
-          <div className="sd-deliverables-content">
-            <div className="sd-deliverables-left">
-              <h3 className="sd-section-heading">WHAT YOU<br />GET</h3>
+        <section className="max-w-grid-max mx-auto px-grid-margin py-[60px] border-b-2 border-border">
+          <div className="flex flex-col gap-[32px] lg:grid lg:grid-cols-[1fr_2fr] lg:gap-[80px]">
+            <div>
+              <h3 className="font-heading text-xl font-bold leading-[1.2] m-0 tracking-[-0.5px]">WHAT YOU<br />GET</h3>
             </div>
-            <div className="sd-deliverables-right">
-              <div className="sd-deliverables-grid">
+            <div>
+              <div className="flex flex-col gap-0">
                 {detail.deliverables.map((item, index) => (
-                  <div key={index} className="sd-deliverable-item">
-                    <span className="sd-deliverable-number">{String(index + 1).padStart(2, '0')}</span>
-                    <p className="sd-deliverable-text">{item}</p>
+                  <div key={index} className="flex items-start gap-[16px] py-[20px] border-b border-border first:pt-0 last:border-b-0 last:pb-0">
+                    <span className="font-sans text-[12px] font-bold text-accent shrink-0 pt-[2px]">{String(index + 1).padStart(2, '0')}</span>
+                    <p className="font-sans text-base leading-[1.5] m-0">{item}</p>
                   </div>
                 ))}
               </div>
@@ -166,14 +166,14 @@ export default function ServiceDetail() {
 
       {/* Ideal For Section */}
       {detail.idealFor && (
-        <section className="sd-ideal">
-          <div className="sd-ideal-content">
-            <h3 className="sd-ideal-heading">IDEAL FOR</h3>
-            <div className="sd-ideal-grid">
+        <section className="max-w-grid-max mx-auto px-grid-margin pb-[60px]">
+          <div className="bg-card-bg p-[40px_24px] md:p-[40px] border-2 border-border">
+            <h3 className="font-heading text-xl font-bold m-[0_0_24px_0] tracking-[-0.5px]">IDEAL FOR</h3>
+            <div className="flex flex-col gap-[16px] md:grid md:grid-cols-3 md:gap-0">
               {detail.idealFor.map((item, index) => (
-                <div key={index} className="sd-ideal-card">
-                  <span className="sd-ideal-icon">→</span>
-                  <p className="sd-ideal-text">{item}</p>
+                <div key={index} className="flex items-start gap-[16px] py-[16px] border-b border-border last:border-b-0 last:pb-0 md:border-b-0 md:border-r md:border-border md:p-[0_24px] md:flex-col md:gap-[12px] md:first:pl-0 md:last:border-r-0 md:last:pr-0">
+                  <span className="text-[18px] text-accent shrink-0 font-bold">→</span>
+                  <p className="font-sans text-base leading-[1.5] m-0">{item}</p>
                 </div>
               ))}
             </div>
@@ -183,25 +183,25 @@ export default function ServiceDetail() {
 
       {/* FAQ Section */}
       {detail.faq && (
-        <section className="sd-faq">
-          <div className="sd-faq-content">
-            <div className="sd-faq-left">
-              <h3 className="sd-section-heading">COMMON<br />QUESTIONS</h3>
+        <section className="max-w-grid-max mx-auto px-grid-margin py-[60px] border-b-2 border-border">
+          <div className="flex flex-col gap-[32px] lg:grid lg:grid-cols-[1fr_2fr] lg:gap-[80px]">
+            <div>
+              <h3 className="font-heading text-xl font-bold leading-[1.2] m-0 tracking-[-0.5px]">COMMON<br />QUESTIONS</h3>
             </div>
-            <div className="sd-faq-right">
-              <div className="sd-faq-list">
+            <div>
+              <div className="flex flex-col">
                 {detail.faq.map((item, index) => (
                   <div 
                     key={index} 
-                    className={`sd-faq-item ${openFaq === index ? 'sd-faq-open' : ''}`}
+                    className="border-b border-border cursor-pointer transition-colors duration-200 last:border-b-0 group"
                     onClick={() => toggleFaq(index)}
                   >
-                    <div className="sd-faq-question">
-                      <span className="sd-faq-q-text">{item.question}</span>
-                      <span className="sd-faq-toggle">{openFaq === index ? '−' : '+'}</span>
+                    <div className="flex justify-between items-center py-[20px] gap-[20px]">
+                      <span className="font-sans text-base font-semibold leading-[1.4]">{item.question}</span>
+                      <span className="font-heading text-[24px] font-bold text-accent shrink-0 w-[32px] h-[32px] flex items-center justify-center transition-transform duration-300">{openFaq === index ? '−' : '+'}</span>
                     </div>
-                    <div className="sd-faq-answer">
-                      <p>{item.answer}</p>
+                    <div className={`overflow-hidden transition-all duration-400 ease-in-out px-0 ${openFaq === index ? 'max-h-[300px] pb-[20px]' : 'max-h-0'}`}>
+                      <p className="font-sans text-[14px] leading-[1.7] m-0 opacity-[0.85]">{item.answer}</p>
                     </div>
                   </div>
                 ))}
@@ -212,19 +212,19 @@ export default function ServiceDetail() {
       )}
 
       {/* CTA Section */}
-      <section className="sd-cta">
-        <div className="sd-cta-content">
-          <h2 className="sd-cta-heading">
+      <section className="max-w-grid-max mx-auto px-grid-margin py-[60px]">
+        <div className="p-[40px_24px] md:p-[80px_60px] flex flex-col items-center gap-[24px] text-center">
+          <h2 className="font-heading text-[clamp(28px,8vw,48px)] font-bold leading-[1.1] m-0 tracking-[-1px]">
             READY TO GET<br />
             <span className="accent-text">STARTED</span>?
           </h2>
-          <p className="sd-cta-description">
+          <p className="font-sans text-base leading-[1.7] m-0 opacity-80">
             Let's talk about your project. I'll scope the work, give you<br />
             a clear timeline, and we'll get moving.
           </p>
-          <div className="sd-cta-buttons">
-            <Link to="/contact"><button className="btn-primary">LET'S TALK PROJECT →</button></Link>
-            <Link to="/projects"><button className="btn-secondary">VIEW PORTFOLIO</button></Link>
+          <div className="flex flex-col md:flex-row gap-[16px] w-full md:w-auto">
+            <Link to="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto">LET'S TALK PROJECT →</button></Link>
+            <Link to="/projects" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto">VIEW PORTFOLIO</button></Link>
           </div>
         </div>
       </section>
