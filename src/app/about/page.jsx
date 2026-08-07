@@ -24,7 +24,7 @@ export default function About() {
       description: 'Perfect is the enemy of shipped. I focus on high-velocity development that gets a functional V1 into users\' hands as weeks, not months.'
     },
     {
-      icon: '</>',
+      icon: <Icon name="Code" size={24} />,
       title: 'MAINTAINABLE CODE',
       description: 'I build for the "future you." My code is structured, documented, and follows architectural patterns that any engineer can pick up.'
     }
@@ -39,9 +39,9 @@ export default function About() {
   ];
 
   const hobbies = [
-    { icon: <Icon name="Mountain" size={16} />, text: 'HIKING THE GREAT RIFT VALLEY' },
-    { icon: <Icon name="Music" size={16} />, text: 'COLLECTING RETRO ELECTRONICS' },
-    { icon: <Icon name="Coffee" size={16} />, text: 'ETHICAL COFFEE ROASTING' }
+    { icon: <Icon name="Mountain" size={16} />, text: 'TRAVELLING TO SCENIC AND SERENE PLACES' },
+    { icon: <Icon name="Music" size={16} />, text: 'LISTENING TO MUSIC' },
+    { icon: <Icon name="Coffee" size={16} />, text: 'COOKING' }
   ];
 
   return (
@@ -72,16 +72,15 @@ export default function About() {
           </div>
           <div className="flex flex-col gap-[24px]">
             <p className="font-sans text-base leading-[1.7] m-0">
-              My journey didn't start with code, but with components. Coming from a background in 
-              mechanical engineering, I was obsessed with how things fit together—the structural 
-              integrity of systems. When I transitioned into the digital realm, that obsession followed.
+              My journey into technology did not begin with a line of code, but with curiosity. During the COVID-19 lockdown in 2020, I watched my little brother learn how to code, and it sparked my interest in understanding how technology could be used to create things.
             </p>
             <p className="font-sans text-base leading-[1.7] m-0">
-              Today, I operate as a Digital Product Builder, bridging the gap between raw backend 
-              logic and refined frontend aesthetics. Based in Nairobi, I work with global teams to 
-              architect solutions that aren't just "functional" but fundamentally robust and scalable.
+              When we returned to school, a few friends and I came up with an idea to build an action video game. Although we never completed the game, that idea led us to start a coding club where we explored programming, each choosing a language to learn and experiment with.
             </p>
-            
+            <p className="font-sans text-base leading-[1.7] m-0">
+              That experience shaped my path in tech. I discovered that I enjoyed building things, solving problems, and turning ideas into practical solutions. Since then, I have continued exploring software development, driven by the same curiosity that started it all: creating technology that solves real-world problems.
+            </p>
+
             <div className="flex flex-col gap-[16px] mt-[16px] md:grid md:grid-cols-2 md:flex-row">
               {stats.map((stat, index) => (
                 <div key={index} className="border-2 border-border py-[24px] px-[20px] flex flex-col gap-[8px]">

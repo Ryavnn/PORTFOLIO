@@ -189,7 +189,7 @@ export default async function CaseStudy({ params }) {
             SIMILAR TRANSFORMATION?
           </h2>
           <div className="flex flex-col md:flex-row gap-[16px] w-full md:w-auto">
-            <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto">LET'S TALK PROJECT →</button></Link>
+            <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto flex items-center justify-center gap-[8px]">LET'S TALK PROJECT <Icon name="ArrowRight" size={16} /></button></Link>
             <Link href="/projects" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto">VIEW PORTFOLIO</button></Link>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import CTASection from '../../../components/Shared/CTASection';
 import Icon from '../../../components/Shared/Icon';
+import CTASection from '../../../components/Shared/CTASection';
 import FaqList from '../../../components/Services/FaqList';
 import { getServiceBySlug } from '../../../utils/api';
 
@@ -48,8 +48,8 @@ export default async function ServiceDetail({ params }) {
             <h1 className="font-heading text-3xl font-bold leading-none m-0 tracking-[-1.5px]">{service.title}</h1>
             <p className="font-sans text-base leading-[1.7] m-0">{service.description}</p>
             <div className="flex flex-col gap-[12px] mt-[8px] md:flex-row">
-              <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto">START THIS PROJECT →</button></Link>
-              <Link href="/services" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto">← ALL SERVICES</button></Link>
+              <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto flex items-center justify-center gap-[8px]">START THIS PROJECT <Icon name="ArrowRight" size={16} /></button></Link>
+              <Link href="/services" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto flex items-center justify-center gap-[8px]"><Icon name="ArrowLeft" size={16} /> ALL SERVICES</button></Link>
             </div>
           </div>
           <div className="flex items-start">
@@ -149,7 +149,7 @@ export default async function ServiceDetail({ params }) {
             <div className="flex flex-col gap-[16px] md:grid md:grid-cols-3 md:gap-0">
               {detail.idealFor.map((item, index) => (
                 <div key={index} className="flex items-start gap-[16px] py-[16px] border-b border-border last:border-b-0 last:pb-0 md:border-b-0 md:border-r md:border-border md:p-[0_24px] md:flex-col md:gap-[12px] md:first:pl-0 md:last:border-r-0 md:last:pr-0">
-                  <span className="text-[18px] text-accent shrink-0 font-bold">→</span>
+                  <span className="text-accent shrink-0 font-bold"><Icon name="ArrowRight" size={24} /></span>
                   <p className="font-sans text-base leading-[1.5] m-0">{item}</p>
                 </div>
               ))}
@@ -184,7 +184,7 @@ export default async function ServiceDetail({ params }) {
             a clear timeline, and we'll get moving.
           </p>
           <div className="flex flex-col md:flex-row gap-[16px] w-full md:w-auto">
-            <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto">LET'S TALK PROJECT →</button></Link>
+            <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto flex items-center justify-center gap-[8px]">LET'S TALK PROJECT <Icon name="ArrowRight" size={16} /></button></Link>
             <Link href="/projects" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto">VIEW PORTFOLIO</button></Link>
           </div>
         </div>

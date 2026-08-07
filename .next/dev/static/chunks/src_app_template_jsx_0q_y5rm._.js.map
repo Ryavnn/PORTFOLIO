@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/ryan/Desktop/PORTFOLIO/src/app/template.jsx"],"sourcesContent":["'use client';\nimport { motion, AnimatePresence } from 'framer-motion';\n\nexport default function Template({ children }) {\n  return (\n    <AnimatePresence mode=\"wait\">\n      <motion.div\n        initial={{ opacity: 0 }}\n        animate={{ opacity: 1 }}\n        exit={{ opacity: 0 }}\n        transition={{ duration: 0.5 }}\n      >\n        {children}\n      </motion.div>\n    </AnimatePresence>\n  );\n}\n"],"names":["Template","children","mode","div","initial","opacity","animate","exit","transition","duration"],"mappings":";;;;;AACA;AAAA;AADA;;;AAGe,SAASA,SAAS,EAAEC,QAAQ,EAAE;IAC3C,qBACE,6LAAC,+MAAe;QAACC,MAAK;kBACpB,cAAA,6LAAC,uMAAM,CAACC,GAAG;YACTC,SAAS;gBAAEC,SAAS;YAAE;YACtBC,SAAS;gBAAED,SAAS;YAAE;YACtBE,MAAM;gBAAEF,SAAS;YAAE;YACnBG,YAAY;gBAAEC,UAAU;YAAI;sBAE3BR;;;;;;;;;;;AAIT;KAbwBD"}}]
-}

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BrowserMockup } from '../Mockups/BrowserMockup';
+import Icon from '../Shared/Icon';
 
 const ProjectCard = ({ project, isReverse }) => {
   const imageUrl = project.images?.featured || project.images?.hero || project.image;
@@ -30,7 +31,7 @@ const ProjectCard = ({ project, isReverse }) => {
             <div className="flex flex-col gap-[16px] relative">
               <div className="flex justify-between items-start gap-[20px]">
                 <h3 className="font-heading text-xl font-bold m-0 tracking-[-0.5px] leading-[1.2]">{project.title}</h3>
-                <div className="text-xl text-accent">→</div>
+                <div className="text-accent"><Icon name="ArrowRight" size={24} /></div>
               </div>
               <p className="font-sans text-base leading-[1.6] m-0">{project.description}</p>
               <div className="font-sans text-xs tracking-[1px] m-0 leading-[1.6]">
@@ -53,7 +54,7 @@ const ProjectCard = ({ project, isReverse }) => {
             <div className="flex flex-col gap-[16px] relative">
               <div className="flex justify-between items-start gap-[20px]">
                 <h3 className="font-heading text-xl font-bold m-0 tracking-[-0.5px] leading-[1.2]">{project.title}</h3>
-                <div className="text-xl text-accent">→</div>
+                <div className="text-accent"><Icon name="ArrowRight" size={24} /></div>
               </div>
               <p className="font-sans text-base leading-[1.6] m-0">{project.description}</p>
               <div className="font-sans text-xs tracking-[1px] m-0 leading-[1.6]">

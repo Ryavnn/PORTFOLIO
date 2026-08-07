@@ -1,4 +1,5 @@
 import ContactForm from '../../components/Contact/ContactForm';
+import Icon from '../../components/Shared/Icon';
 
 export const metadata = {
   title: "Contact — Start a Project with Ryan Njoroge",
@@ -64,7 +65,7 @@ export default function Contact() {
                 <div className="flex flex-col">
                   {socialLinks.map((link, index) => (
                     <a key={index} href={link.url} className="font-sans text-[14px] text-text no-underline flex items-center justify-between font-medium py-[16px] border-b border-solid border-[rgba(15,15,15,0.1)] transition-all duration-300 hover:text-accent hover:pl-[8px] group" target="_blank" rel="noopener noreferrer">
-                      {link.name} <span className="text-[18px] opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]">↗</span>
+                      {link.name} <span className="text-[18px] opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]"><Icon name="ArrowUpRight" size={18} /></span>
                     </a>
                   ))}
                 </div>

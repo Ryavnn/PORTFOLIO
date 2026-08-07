@@ -136,8 +136,8 @@ const Navbar = () => {
                 </button>
               </Link>
               <div className="flex flex-col gap-[16px]">
-                <a href="https://x.com/techbuildske" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-text no-underline opacity-70">Twitter (X) ↗</a>
-                <a href="https://github.com/Ryavnn" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-text no-underline opacity-70">GitHub ↗</a>
+                <a href="https://x.com/techbuildske" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[4px] font-sans text-sm text-text no-underline opacity-70">Twitter (X) <Icon name="ArrowUpRight" size={14} /></a>
+                <a href="https://github.com/Ryavnn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[4px] font-sans text-sm text-text no-underline opacity-70">GitHub <Icon name="ArrowUpRight" size={14} /></a>
               </div>
             </motion.div>
           </motion.div>

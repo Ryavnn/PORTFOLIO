@@ -1,3 +1,0 @@
-module.exports=[599625,a=>{"use strict";a.s(["default",()=>b]);let b=(0,a.i(211857).registerClientReference)(function(){throw Error("Attempted to call the default export of [project]/src/app/template.jsx from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"[project]/src/app/template.jsx","default")},766318,a=>{"use strict";var b=a.i(599625);a.n(b)},197897,function(a){a.n(a.i(766318))}];
-
-//# sourceMappingURL=src_app_template_jsx_0-v_th0._.js.map

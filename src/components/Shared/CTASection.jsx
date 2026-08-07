@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Icon from './Icon';
 
 const CTASection = () => {
   return (
@@ -23,9 +24,9 @@ const CTASection = () => {
               <p className="font-sans text-xs mb-[20px] tracking-[1px] text-text opacity-80">GET IN TOUCH</p>
               <a href="mailto:info@njorogeryan.tech" className="font-sans text-xl my-[10px] mb-[30px] font-medium text-text no-underline inline-block hover:underline">info@njorogeryan.tech</a>
               <div className="flex flex-col max-[480px]:flex-col min-[481px]:flex-row gap-[15px] mb-[40px]">
-                <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto">START A PROJECT →</button></Link>
+                <Link href="/contact" className="w-full md:w-auto"><button className="btn-primary w-full md:w-auto flex items-center justify-center gap-[8px]">START A PROJECT <Icon name="ArrowRight" size={16} /></button></Link>
                 <Link href="/services" className="w-full md:w-auto"><button className="btn-secondary w-full md:w-auto">VIEW MY SERVICES</button></Link>
-                <a href="/Ryan_Njoroge_CV.pdf" download target="_blank" rel="noopener noreferrer"><button className="btn-outline">Download CV ↓</button></a>
+                <a href="/Ryan_Njoroge_CV.pdf" download target="_blank" rel="noopener noreferrer" className="w-full md:w-auto"><button className="btn-outline w-full md:w-auto flex items-center justify-center gap-[8px]">Download CV <Icon name="ArrowDown" size={16} /></button></a>
               </div>
               <div className="flex flex-wrap max-[480px]:gap-[30px] gap-[40px] mt-[20px] pt-[40px] border-t border-border">
                 <div className="stat">

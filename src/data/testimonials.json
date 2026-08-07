@@ -2,22 +2,22 @@
   {
     "id": "01",
     "company": "Construction",
-    "text": "The employee management system Ryano Built is the backbone of our operations. He took time to understand our needs before we finished explaining them.",
+    "text": "Ryan understood our vision and created a professional and engaging website that effectively represents our company’s values and expertise while making it easier for clients to connect with us.",
     "author": "John Ngenga",
-    "role": "CEO Gwella Store"
+    "role": "CEO Conven LLC"
   },
   {
     "id": "02",
-    "company": "Finance",
-    "text": "The employee management system Ryano Built is the backbone of our operations. He took time to understand our needs before we finished explaining them.",
-    "author": "Jane Doe",
-    "role": "Director Focus"
+    "company": "Software Engineering",
+    "text": "Working with Ryan was a great experience. He transformed backend requirements into an intuitive frontend, demonstrating strong technical skills, creativity, and excellent teamwork throughout the project.",
+    "author": "Nebstar Malala",
+    "role": "Freelance Backend Developer"
   },
   {
     "id": "03",
     "company": "Retail",
-    "text": "The employee management system Ryano Built is the backbone of our operations. He took time to understand our needs before we finished explaining them.",
-    "author": "Alice Kim",
-    "role": "CTO Mart"
+    "text": "Ryan built a clean, easy-to-use POS for our business. He was professional, skilled, and really committed to getting everything right. His work helped us look more established and improved how we manage orders.",
+    "author": "Nickson Akhombi",
+    "role": "Sanya Technologies"
   }
 ]
