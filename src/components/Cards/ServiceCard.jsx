@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
       </div>
       <p className="font-sans text-sm leading-[1.5] flex-1">{service.title}</p>
       <Link href={`/services/${service.slug}`} className="flex items-center gap-[4px] font-sans text-xs text-text no-underline font-medium tracking-[0.5px] py-[10px]">
-        LEARN MORE <Icon name="ArrowRight" size={14} />
+        EXPLORE {service.title} <Icon name="ArrowRight" size={14} />
       </Link>
     </div>
   );
